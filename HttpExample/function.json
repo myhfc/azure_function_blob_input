@@ -15,8 +15,8 @@
       "name": "inputblob",
       "type": "blob",
       "dataType": "binary",
-      "path": "prediction_content_based.pickle",
-      "connection": "AzureWebJobsStorage",
+      "path": "oc9/prediction_content_based.pickle",
+      "connection": "rsfunctiontest2_STORAGE",
       "direction": "in"
     },
     {
