@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: './HttpExample' # set this to the path to your web app project, defaults to the repository root
   PYTHON_VERSION: '3.8' # set this to the python version to use (supports 3.6, 3.7, 3.8)
 
 jobs:
@@ -65,6 +65,6 @@ jobs:
           app-name: 'app-rs1'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CD407EEB98F443A39A4A18F08F52D5ED }}
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
           scm-do-build-during-deployment: true
           enable-oryx-build: true
